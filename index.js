@@ -19,8 +19,12 @@ Do the following:
 
    HINT: no function required
 */
-
-
+const votingAge = 18;
+if(votingAge >= 18) {
+  console.log(true);
+} else {
+  console.log(false);
+}
 
 /*
 Task 1b - Values (not auto tested)
@@ -33,7 +37,14 @@ Do the following:
 
    HINT: no function required
 */
-
+let firstThing = 1 + 1;
+firstThing = 3;
+let secondThing = 2;
+if(firstThing === secondThing) {
+  console.log('it is true');
+} else {
+  console.log('it is false');
+}
 
 
 
@@ -48,7 +59,8 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+let myNumber = '1999';
+console.log(Number(myNumber));
 
 
 
@@ -64,7 +76,7 @@ Do the following:
 function multiply(num1, num2){
   return num1 * num2;
 }
-
+console.log(multiply(2,4));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -77,10 +89,11 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+  const dogYears = 7 * age;
+  return dogYears;
 }
-
+console.log(dogYears(26));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -129,8 +142,29 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(weight,age){
+  let foodAmount;
+  if (age >= 1) {
+    if (weight <= 5) {
+      foodAmount = weight * .05;
+    } else if (weight >= 6 && weight <= 10) {
+      foodAmount = weight * .04;
+    } else if (weight >= 11 && weight <= 15) {
+      foodAmount = weight * .03;
+    } else if (weight > 15) {
+      foodAmount = weight * .02;
+    }
+  }
+  else if (age < 1) {
+    if (age <= .33) {
+      foodAmount = weight * .10;
+    } else if (age >= .33 && age <= .58) {
+      foodAmount = weight * .05;
+    } else if (age >= .58 && age <= 1) {
+      foodAmount = weight * .04;
+    }
+  }
+  return foodAmount;
 }
 
 
