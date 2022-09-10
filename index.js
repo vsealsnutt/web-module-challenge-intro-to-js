@@ -212,7 +212,7 @@ function game(user, computer){
   }
   if (user === "paper" && computer === "rock") {
     return "you win!";
-  } else if (user === "scissors" && computer = "rock") {
+  } else if (user === "scissors" && computer === "rock") {
     return "you lose!";
   }
   if (user === "rock" && computer === "scissors") {
